@@ -1,5 +1,6 @@
 services:
   server:
+    init: true
     build:
       context: .
       dockerfile: server.Dockerfile
@@ -9,6 +10,7 @@ services:
 
 
   client:
+    init: true
     build:
       context: .
       dockerfile: client.Dockerfile
