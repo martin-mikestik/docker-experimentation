@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: server.Dockerfile
     container_name: simple-server
+    networks:
+      - my-custom-net
 
 
   client:
@@ -15,5 +17,9 @@ services:
       - server
     stdin_open: true
     tty: true
+    networks:
+      - my-custom-net
 
-
+networks:
+  my-custom-net:
+    driver: bridge
