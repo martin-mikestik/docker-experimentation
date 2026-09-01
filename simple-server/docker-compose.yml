@@ -1,0 +1,13 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+    container_name: simple-server
+
+
+  client:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    container_name: simple-client
