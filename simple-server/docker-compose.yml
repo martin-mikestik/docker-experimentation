@@ -11,3 +11,9 @@ services:
       context: .
       dockerfile: client.Dockerfile
     container_name: simple-client
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+
+
