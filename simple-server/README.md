@@ -14,3 +14,13 @@ steps:
 - docker compose up -d --build
 - start the interactive shell from client
 - use curl manually to test
+
+***
+Project finished:
+to test it works:
+
+- `docker compose up -d --build`
+- `docker exec -it simple-client bash`
+
+Inside the container's shell, run:
+- `curl http://server:8000/index.md`
